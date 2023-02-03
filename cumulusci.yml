@@ -1,0 +1,28 @@
+minimum_cumulusci_version: '3.68.1'
+project:
+    name: easy-iframe
+    package:
+        name: easy-iframe
+        api_version: '55.0'
+    git:
+        default_branch: 'main'
+        prefix_feature: 'feature/'
+        prefix_beta: 'beta/'
+        prefix_release: 'release/'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/easy-iframe/tests
+            options:
+                outputdir: robot/easy-iframe/results
+
+    robot_testdoc:
+        options:
+            path: robot/easy-iframe/tests
+            output: robot/easy-iframe/doc/easy-iframe_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
