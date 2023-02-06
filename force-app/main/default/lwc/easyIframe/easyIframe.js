@@ -9,9 +9,9 @@ export default class EasyIframe extends LightningElement {
     @api fieldName;
     @track url;
     
-    @wire(getRecord, { recordId: '$recordId', fields: [fieldName] })
-    record;
-    error;
+    // @wire(getRecord, { recordId: '$recordId', fields: [fieldName] })
+    // record;
+    // error;
     
     async connectedCallback() {
         console.log("RECORD: "+ this.recordId);
